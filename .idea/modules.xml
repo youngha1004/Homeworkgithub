@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Homeworkgithub.iml" filepath="$PROJECT_DIR$/Homeworkgithub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Drone_MAVLink_Viewer/Drone_MAVLink_Viewer.iml" filepath="$PROJECT_DIR$/Drone_MAVLink_Viewer/Drone_MAVLink_Viewer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW/HW.iml" filepath="$PROJECT_DIR$/HW/HW.iml" />
     </modules>
   </component>
 </project>
