@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uav.util.mavlinkviewer.MAVLinkViewerController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                      <Button fx:id="btnUavClientStart" mnemonicParsing="false" onAction="#handleBtnUavClientStart" prefHeight="40.0" prefWidth="120.0" text="UAV Client Start" />
+                        <Button fx:id="btnUavClientStop" mnemonicParsing="false" onAction="#handleBtnUavClientStop" prefHeight="40.0" prefWidth="120.0" text="UAV Client Stop" />
+                        <Label text="Host" />
+                        <TextField fx:id="txtUavClientHost" prefWidth="120.0" text="localhost" />
+                        <Label text="Port" />
+                        <TextField fx:id="txtUavClientPort" prefWidth="60.0" text="5760" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <center>
+            <ListView fx:id="listViewUavMavlink" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" spacing="5.0" styleClass="hbox" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtUavMsgId" onKeyPressed="#handleTxtUavMsgIdKeyPressed" prefHeight="35.0" promptText="msgid,msgid,..." HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnUavFilter" mnemonicParsing="false" onAction="#handleBtnUavFilter" prefHeight="40.0" prefWidth="60.0" text="Filter" />
+                  <Button fx:id="btnUavMavlinkLog" mnemonicParsing="false" onAction="#handleBtnUavMavlinkLog" prefHeight="40.0" prefWidth="60.0" text="Hide" />
+                  <Button fx:id="btnUavMavlinkType" mnemonicParsing="false" onAction="#handleBtnUavMavlinkType" prefHeight="40.0" prefWidth="60.0" text="Byte" />
+                  <Button fx:id="btnUavMavlinkClear" mnemonicParsing="false" onAction="#handleBtnUavMavlinkClear" prefHeight="40.0" prefWidth="60.0" text="Clear" />
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+         <center>
+            <ListView fx:id="listViewGcsMavlink" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </center>
+         <top>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <ToolBar prefHeight="40.0" prefWidth="200.0">
+                    <items>
+                        <Label prefHeight="40.0" text="GCS Connection Port" />
+                        <TextField fx:id="txtGcsServerPort" prefWidth="100.0" text="50002" />
+                        <Label fx:id="txtGCSConnectionNumber" prefHeight="40.0" text="GCS Connection Number: 0" />
+                    </items>
+                  </ToolBar>
+               </children>
+            </VBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER" spacing="5.0" styleClass="hbox" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtGcsMsgId" onKeyPressed="#handleTxtGcsMsgIdKeyPressed" prefHeight="35.0" promptText="GCS1:msgid,msgid,..." HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnGcsFilter" mnemonicParsing="false" onAction="#handleBtnGcsFilter" prefHeight="40.0" prefWidth="60.0" text="Filter" />
+                  <Button fx:id="btnGcsMavlinkLog" mnemonicParsing="false" onAction="#handleBtnGcsMavlinkLog" prefHeight="40.0" prefWidth="60.0" text="Hide" />
+                  <Button fx:id="btnGcsMavlinkType" mnemonicParsing="false" onAction="#handleBtnGcsMavlinkType" prefHeight="40.0" prefWidth="60.0" text="Byte" />
+                  <Button fx:id="btnGcsMavlinkClear" mnemonicParsing="false" onAction="#handleBtnGcsMavlinkClear" prefHeight="40.0" prefWidth="60.0" text="Clear" />
+               </children>
+               <padding>
+                  <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</HBox>
